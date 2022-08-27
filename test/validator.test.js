@@ -11,7 +11,7 @@ describe('valid sudoku', () => {
   test('recognizes an incomplete sudoku', async () => {
     const sudoku = await fs.readFile(__dirname + '/fixtures/valid_incomplete.sudoku')
 
-    expect(Validator.validate(sudoku.toString())).toBe('Sudoku is valid.')
+    expect(Validator.validate(sudoku.toString())).toBe('Sudoku is valid but incomplete.')
   })
 })
 
