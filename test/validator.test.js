@@ -17,9 +17,9 @@ describe('valid sudoku', () => {
 
 describe('invalid sudoku', () => {
   [
-    __dirname + 'fixtures/invalid_due_to_row_dupe.sudoku',
-    __dirname + 'fixtures/invalid_due_to_column_dupe.sudoku',
-    __dirname + 'fixtures/invalid_due_to_subgroup_dupe.sudoku'
+    __dirname + '/fixtures/invalid_due_to_row_dupe.sudoku',
+    __dirname + '/fixtures/invalid_due_to_column_dupe.sudoku',
+    __dirname + '/fixtures/invalid_due_to_subgroup_dupe.sudoku'
   ].forEach(path => {
     test('recognizes invalid sudoku', async () => {
       const sudoku = await fs.readFile(path)
